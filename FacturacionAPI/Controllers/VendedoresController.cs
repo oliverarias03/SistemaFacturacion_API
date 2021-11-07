@@ -36,6 +36,26 @@ namespace FacturacionAPI.Controllers
 
         }
 
+        [HttpGet("GetVendedores")]
+        public IActionResult GetVendedores()
+        {
+           return Ok(this._vendedoresRepository.GetAll().ToList());
+        }
+
+
+        [HttpGet("GetVendedoresByCedula")]
+        public IActionResult GetUsersById(string cedula)
+        {
+            var users = this._vendedoresRepository.GetAllBy(u => u.Cedula == cedula).ToList();
+
+            if (users == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(users);
+        }
+
         [HttpPost("Create")]
         public override IActionResult Create(Vendedores entity)
         {
