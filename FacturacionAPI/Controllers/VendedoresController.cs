@@ -75,7 +75,7 @@ namespace FacturacionAPI.Controllers
 
         }
 
-        [HttpPut("Editar")]
+        [HttpPost("Editar")]
         public override IActionResult Edit(Vendedores entity)
         {
             if (this._vendedoresRepository.Exists(x => x.Cedula.ToLower() == entity.Cedula.ToLower() && x.Id != entity.Id))
@@ -90,20 +90,27 @@ namespace FacturacionAPI.Controllers
             }
         }
 
-        [HttpDelete("Eliminar")]
-        public IActionResult Eliminar(int id)
+        [HttpPost("Eliminar")]
+        public IActionResult Eliminar(Vendedores vendedor)
         {
-            if (!this._vendedoresRepository.Exists(x => x.Id == id))
+            try
             {
-                return BadRequest("Usuario no existente");
+                if (!this._vendedoresRepository.Exists(x => x.Id == vendedor.Id))
+                {
+                    return BadRequest("Usuario no existente");
+                }
+                else
+                {
+                    Vendedores u = this._vendedoresRepository.Find(vendedor.Id);
+
+                    this._vendedoresRepository.Remove(u);
+
+                    return Ok(1);
+                }
             }
-            else
+            catch(Exception e)
             {
-                Vendedores u = this._vendedoresRepository.Find(id);
-
-                this._vendedoresRepository.Remove(u);
-
-                return Ok("Usuario Eliminado");
+                return BadRequest(e.Message);
             }
 
         }
