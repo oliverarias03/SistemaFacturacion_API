@@ -9116,23 +9116,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hecto\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hecto\\OneDrive\\Documentos\\UNAPEC\\6to cuatrimestre\\ISO810\\2doParcial\\SistemaFacturacion_API\\FacturacionAPI\\FacturacionAPI.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\APEC\\6 out of 9\\OpenSource\\ProyectoFinal\\API\\FacturacionAPI\\FacturacionAPI.csproj",
       "projectName": "FacturacionAPI",
-      "projectPath": "C:\\Users\\hecto\\OneDrive\\Documentos\\UNAPEC\\6to cuatrimestre\\ISO810\\2doParcial\\SistemaFacturacion_API\\FacturacionAPI\\FacturacionAPI.csproj",
-      "packagesPath": "C:\\Users\\hecto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hecto\\OneDrive\\Documentos\\UNAPEC\\6to cuatrimestre\\ISO810\\2doParcial\\SistemaFacturacion_API\\FacturacionAPI\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\APEC\\6 out of 9\\OpenSource\\ProyectoFinal\\API\\FacturacionAPI\\FacturacionAPI.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\APEC\\6 out of 9\\OpenSource\\ProyectoFinal\\API\\FacturacionAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\hecto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9213,6 +9209,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.13, 3.1.13]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -9221,7 +9223,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }
