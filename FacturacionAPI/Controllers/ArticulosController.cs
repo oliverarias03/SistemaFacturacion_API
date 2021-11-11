@@ -27,7 +27,7 @@ namespace FacturacionAPI.Controllers
         }
 
         [HttpGet("GetArticulosById")]
-        public IActionResult GetUsersById(int id)
+        public IActionResult GetArticulosById(int id)
         {
             var items = this._articulosRepository.GetAllBy(u => u.Id == id).ToList();
 
