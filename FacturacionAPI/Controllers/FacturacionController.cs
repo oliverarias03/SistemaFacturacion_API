@@ -64,7 +64,7 @@ namespace FacturacionAPI.Controllers
         }
 
         // PUT api/<FacturacionController>/5
-        [HttpPut("Editar")]
+        [HttpPost("Editar")]
         public override IActionResult Edit(Facturacion entity)
         {
             if (this._factuacionRespository.Exists(x => x.Comentario.ToLower() == entity.Comentario.ToLower() && x.Id != entity.Id))
@@ -80,14 +80,14 @@ namespace FacturacionAPI.Controllers
         }
 
         // DELETE api/<FacturacionController>/5
-        [HttpDelete("Eliminar")]
+        [HttpPost("Eliminar")]
         public IActionResult Eliminar(Facturacion factura)
         {
             try
             {
                 if (!this._factuacionRespository.Exists(x => x.Id == factura.Id))
                 {
-                    return BadRequest("Usuario no existente");
+                    return BadRequest("Factura no existente");
                 }
                 else
                 {
