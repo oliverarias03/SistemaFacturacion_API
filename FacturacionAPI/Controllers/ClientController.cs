@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FacturacionAPI.Controllers
 {
-    [Route("api/client")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ClientController : BaseController<Clientes>
     {
