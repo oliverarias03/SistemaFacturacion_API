@@ -16,17 +16,30 @@ namespace FacturacionAPI.Controllers
     public class FacturacionController : BaseController<Facturacion>
     {
         private readonly IFacturacionRepository _factuacionRespository;
+        private readonly IVendedoresRepository _vendedoresRepository;
+        private readonly IClientesRepository _clientesRepository;
+        private readonly IArticulosRepository _articulosRepository;
 
-        public FacturacionController(IFacturacionRepository facturacionRepository)
+        public FacturacionController(IFacturacionRepository facturacionRepository, IVendedoresRepository vendedoresRepository, IClientesRepository clientesRepository, IArticulosRepository articulosRepository)
         {
             this._factuacionRespository = facturacionRepository;
+            this._vendedoresRepository = vendedoresRepository;
+            this._clientesRepository = clientesRepository;
+            this._articulosRepository = articulosRepository;
         }
 
         // GET: api/<FacturacionController>
         [HttpGet("GetFacturaciones")]
         public ActionResult GetFacturacion()
         {
-            return Ok(_factuacionRespository.GetAll().ToList());
+            var res = this._factuacionRespository.GetAll().ToList();
+            foreach (Facturacion f in res)
+            {
+                f.IdArticuloNavigation = this._articulosRepository.GetAllBy(x => x.Id == f.IdArticulo).FirstOrDefault();
+                f.IdVendedorNavigation = this._vendedoresRepository.GetAllBy(x => x.Id == f.IdVendedor).FirstOrDefault();
+                f.IdClienteNavigation = this._clientesRepository.GetAllBy(x => x.Id == f.IdCliente).FirstOrDefault();
+            }
+            return Ok(res);
         }
 
         // GET api/<FacturacionController>/5
@@ -47,6 +60,14 @@ namespace FacturacionAPI.Controllers
         [HttpPost("Create")]
         public override IActionResult Create(Facturacion entity)
         {
+            Facturacion facturacion = new Facturacion();
+            facturacion.IdVendedor = entity.IdVendedor;
+            facturacion.IdArticulo = entity.IdArticulo;
+            facturacion.IdCliente = entity.IdCliente;
+            facturacion.Fecha = entity.Fecha;
+            facturacion.Comentario = entity.Comentario;
+            facturacion.Cantidad = entity.Cantidad;
+            facturacion.PrecioUnitario = entity.PrecioUnitario;
 
             if (this._factuacionRespository.Exists(x => x.Id == entity.Id))
             {
@@ -55,8 +76,9 @@ namespace FacturacionAPI.Controllers
             else
             {
 
-                entity.Id = 0;
-                var res = this._factuacionRespository.Add(entity);
+                facturacion.Id = 0;
+
+                var res = this._factuacionRespository.Add(facturacion);
 
                 return Ok(res);
             }

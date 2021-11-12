@@ -27,7 +27,7 @@ namespace FacturacionAPI.Controllers
         }
 
         [HttpGet("GetArticulosById")]
-        public IActionResult GetUsersById(int id)
+        public IActionResult GetArticulosById(int id)
         {
             var items = this._articulosRepository.GetAllBy(u => u.Id == id).ToList();
 
@@ -53,7 +53,7 @@ namespace FacturacionAPI.Controllers
             }
         }
 
-        [HttpPut("Editar")]
+        [HttpPost("Editar")]
         public override IActionResult Edit(Articulos entity)
         {
             if (this._articulosRepository.Exists(x => x.Descripcion.ToLower() == entity.Descripcion.ToLower() && x.Id != entity.Id))
@@ -67,19 +67,19 @@ namespace FacturacionAPI.Controllers
             }
         }
 
-        [HttpDelete("Eliminar")]
-        public IActionResult Eliminar(int id)
+        [HttpPost("Eliminar")]
+        public IActionResult Eliminar(Articulos entity)
         {
-            if (!this._articulosRepository.Exists(x => x.Id == id))
+            if (!this._articulosRepository.Exists(x => x.Id == entity.Id))
             {
                 return BadRequest("Articulo no existente");
             }
             else
             {
-                Articulos a = this._articulosRepository.Find(id);
+                Articulos a = this._articulosRepository.Find(entity.Id);
                 this._articulosRepository.Remove(a);
 
-                return Ok("Articulo Eliminado");
+                return Ok(1);
             }
 
         }
