@@ -17,6 +17,7 @@ namespace FacturacionAPI.Models
         public string Comentario { get; set; }
         public int? Cantidad { get; set; }
         public decimal? PrecioUnitario { get; set; }
+        public int? IdAsiento { get; set; }
 
         public virtual Articulos IdArticuloNavigation { get; set; }
         public virtual Clientes IdClienteNavigation { get; set; }

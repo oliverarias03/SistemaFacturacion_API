@@ -23,6 +23,7 @@ namespace FacturacionAPI.Models
         public virtual DbSet<AsientosContables> AsientosContables { get; set; }
         public virtual DbSet<Clientes> Clientes { get; set; }
         public virtual DbSet<Facturacion> Facturacion { get; set; }
+        public virtual DbSet<VFacturacion> VFacturacion { get; set; }
         public virtual DbSet<Vendedores> Vendedores { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -120,6 +121,23 @@ namespace FacturacionAPI.Models
                     .WithMany(p => p.Facturacion)
                     .HasForeignKey(d => d.IdVendedor)
                     .HasConstraintName("FK__Facturaci__IdVen__628FA481");
+            });
+
+            modelBuilder.Entity<VFacturacion>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vFacturacion");
+
+                entity.Property(e => e.Comentario)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Fecha).HasColumnType("date");
+
+                entity.Property(e => e.Id).ValueGeneratedOnAdd();
+
+                entity.Property(e => e.Monto).HasColumnType("decimal(29, 2)");
             });
 
             modelBuilder.Entity<Vendedores>(entity =>

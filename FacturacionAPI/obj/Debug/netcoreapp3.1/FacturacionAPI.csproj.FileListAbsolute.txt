@@ -149,7 +149,6 @@ C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAP
 C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\obj\Debug\netcoreapp3.1\FacturacionAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\obj\Debug\netcoreapp3.1\staticwebassets\FacturacionAPI.StaticWebAssets.Manifest.cache
 C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\obj\Debug\netcoreapp3.1\staticwebassets\FacturacionAPI.StaticWebAssets.xml
-C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\FacturacionAPI.styles.css
 C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\obj\Debug\netcoreapp3.1\FacturacionAPI.RazorTargetAssemblyInfo.cache
 C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\obj\Debug\netcoreapp3.1\FacturacionAPI.csproj.CopyComplete
 C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\obj\Debug\netcoreapp3.1\FacturacionAPI.dll
@@ -322,3 +321,9 @@ C:\Users\hecto\OneDrive\Documentos\UNAPEC\6to cuatrimestre\ISO810\2doParcial\Sis
 C:\Users\hecto\OneDrive\Documentos\UNAPEC\6to cuatrimestre\ISO810\2doParcial\SistemaFacturacion_API\FacturacionAPI\obj\Debug\netcoreapp3.1\FacturacionAPI.dll
 C:\Users\hecto\OneDrive\Documentos\UNAPEC\6to cuatrimestre\ISO810\2doParcial\SistemaFacturacion_API\FacturacionAPI\obj\Debug\netcoreapp3.1\FacturacionAPI.pdb
 C:\Users\hecto\OneDrive\Documentos\UNAPEC\6to cuatrimestre\ISO810\2doParcial\SistemaFacturacion_API\FacturacionAPI\obj\Debug\netcoreapp3.1\FacturacionAPI.genruntimeconfig.cache
+C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\bin\Debug\netcoreapp3.1\global.json
+C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.FacturacionAPI - Web Deploy.json
+C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
+C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\FacturacionAPI - Web Deploy\apis1.arm.json
+C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\FacturacionAPI - Web Deploy\profile.arm.json

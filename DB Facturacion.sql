@@ -50,3 +50,5 @@ MontoAsiento decimal(18,2),
 Estado varchar(10)
 )
 GO
+
+Alter table Facturacion ADD IdAsiento int

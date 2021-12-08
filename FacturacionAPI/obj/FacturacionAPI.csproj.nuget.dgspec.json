@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hecto\\OneDrive\\Documentos\\UNAPEC\\6to cuatrimestre\\ISO810\\2doParcial\\SistemaFacturacion_API\\FacturacionAPI\\FacturacionAPI.csproj": {}
+    "C:\\Users\\User\\Desktop\\APEC\\6 out of 9\\OpenSource\\ProyectoFinal\\API\\FacturacionAPI\\FacturacionAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hecto\\OneDrive\\Documentos\\UNAPEC\\6to cuatrimestre\\ISO810\\2doParcial\\SistemaFacturacion_API\\FacturacionAPI\\FacturacionAPI.csproj": {
+    "C:\\Users\\User\\Desktop\\APEC\\6 out of 9\\OpenSource\\ProyectoFinal\\API\\FacturacionAPI\\FacturacionAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hecto\\OneDrive\\Documentos\\UNAPEC\\6to cuatrimestre\\ISO810\\2doParcial\\SistemaFacturacion_API\\FacturacionAPI\\FacturacionAPI.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\APEC\\6 out of 9\\OpenSource\\ProyectoFinal\\API\\FacturacionAPI\\FacturacionAPI.csproj",
         "projectName": "FacturacionAPI",
-        "projectPath": "C:\\Users\\hecto\\OneDrive\\Documentos\\UNAPEC\\6to cuatrimestre\\ISO810\\2doParcial\\SistemaFacturacion_API\\FacturacionAPI\\FacturacionAPI.csproj",
-        "packagesPath": "C:\\Users\\hecto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hecto\\OneDrive\\Documentos\\UNAPEC\\6to cuatrimestre\\ISO810\\2doParcial\\SistemaFacturacion_API\\FacturacionAPI\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\APEC\\6 out of 9\\OpenSource\\ProyectoFinal\\API\\FacturacionAPI\\FacturacionAPI.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\APEC\\6 out of 9\\OpenSource\\ProyectoFinal\\API\\FacturacionAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\hecto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -106,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.415\\RuntimeIdentifierGraph.json"
         }
       }
     }

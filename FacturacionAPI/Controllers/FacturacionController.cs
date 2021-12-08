@@ -19,13 +19,15 @@ namespace FacturacionAPI.Controllers
         private readonly IVendedoresRepository _vendedoresRepository;
         private readonly IClientesRepository _clientesRepository;
         private readonly IArticulosRepository _articulosRepository;
+        private readonly IVFacturacionRepository _vfacturacionRepository;
 
-        public FacturacionController(IFacturacionRepository facturacionRepository, IVendedoresRepository vendedoresRepository, IClientesRepository clientesRepository, IArticulosRepository articulosRepository)
+        public FacturacionController(IFacturacionRepository facturacionRepository, IVendedoresRepository vendedoresRepository, IClientesRepository clientesRepository, IArticulosRepository articulosRepository, IVFacturacionRepository vfacturacionRepository)
         {
             this._factuacionRespository = facturacionRepository;
             this._vendedoresRepository = vendedoresRepository;
             this._clientesRepository = clientesRepository;
             this._articulosRepository = articulosRepository;
+            this._vfacturacionRepository = vfacturacionRepository;
         }
 
         // GET: api/<FacturacionController>
@@ -123,6 +125,74 @@ namespace FacturacionAPI.Controllers
             catch (Exception e)
             {
                 return BadRequest(e.Message);
+            }
+
+        }
+
+        [HttpGet("searchFacturas")]
+        public IActionResult searchFacturas(DateTime desde, DateTime hasta)
+        {
+            if(hasta.Year != 1969)
+            {
+                var facturas = this._vfacturacionRepository.GetAllBy(u => u.Fecha >= desde && u.Fecha <= hasta).ToList();
+
+                if (facturas == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(facturas);
+            }
+            else
+            {
+                var facturas = this._vfacturacionRepository.GetAllBy(u => u.Fecha >= desde).ToList();
+
+                if (facturas == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(facturas);
+            }
+
+        }
+
+        [HttpGet("searchFacturas2")]
+        public IActionResult searchFacturas2(DateTime desde, DateTime hasta)
+        {
+            if (hasta.Year != 1969)
+            {
+                var facturas = this._factuacionRespository.GetAllBy(u => u.Fecha >= desde && u.Fecha <= hasta).ToList();
+                foreach (Facturacion f in facturas)
+                {
+                    f.IdArticuloNavigation = this._articulosRepository.GetAllBy(x => x.Id == f.IdArticulo).FirstOrDefault();
+                    f.IdVendedorNavigation = this._vendedoresRepository.GetAllBy(x => x.Id == f.IdVendedor).FirstOrDefault();
+                    f.IdClienteNavigation = this._clientesRepository.GetAllBy(x => x.Id == f.IdCliente).FirstOrDefault();
+                }
+
+                if (facturas == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(facturas);
+            }
+            else
+            {
+                var facturas = this._factuacionRespository.GetAllBy(u => u.Fecha >= desde).ToList();
+                foreach (Facturacion f in facturas)
+                {
+                    f.IdArticuloNavigation = this._articulosRepository.GetAllBy(x => x.Id == f.IdArticulo).FirstOrDefault();
+                    f.IdVendedorNavigation = this._vendedoresRepository.GetAllBy(x => x.Id == f.IdVendedor).FirstOrDefault();
+                    f.IdClienteNavigation = this._clientesRepository.GetAllBy(x => x.Id == f.IdCliente).FirstOrDefault();
+                }
+
+                if (facturas == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(facturas);
             }
 
         }

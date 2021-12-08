@@ -75,9 +75,17 @@ namespace FacturacionAPI
                 License = license
             };
 
-            services.AddSwaggerGen(c =>
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v1", info);
+            //});
+            services.AddSwaggerGen(config =>
             {
-                c.SwaggerDoc("v1", info);
+                config.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Title = "FacturacionAPI",
+                    Version = "v1",
+                });
             });
 
             services.AddScoped<IVendedoresRepository, VendedoresRepository>();
@@ -85,6 +93,8 @@ namespace FacturacionAPI
             services.AddScoped<IAsientosContablesRepository, AsientosContablesRepository>();
             services.AddScoped<IClientesRepository, ClientesRepository>();
             services.AddScoped<IFacturacionRepository, FacturacionRepository>();
+            services.AddScoped<IVFacturacionRepository, VFacturacionRepository>();
+
 
         }
 
