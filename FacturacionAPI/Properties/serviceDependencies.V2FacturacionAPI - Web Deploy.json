@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/unapec-iso810-815/databases/Facturacion",
+      "type": "mssql.azure",
+      "connectionId": "MovieDBConnection",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

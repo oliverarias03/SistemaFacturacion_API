@@ -121,6 +121,7 @@ namespace FacturacionAPI
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json",
                 "Swagger Demo API v1");
+                c.RoutePrefix = string.Empty;
             });
 
             app.UseEndpoints(endpoints =>

@@ -14,6 +14,7 @@ namespace FacturacionAPI.Repositories.Interfaces
         IEnumerable<TEntity> GetAll();
         IEnumerable<TEntity> GetAllBy(Expression<Func<TEntity, bool>> predicate, bool asNotracking = false);
         TEntity Update(TEntity entity);
+        List<TEntity> UpdateRange(List<TEntity> entities);
         TEntity Add(TEntity entity);
         List<TEntity> AddRange(List<TEntity> entities);
         void Remove(TEntity entity);

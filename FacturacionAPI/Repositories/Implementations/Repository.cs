@@ -56,6 +56,14 @@ namespace FacturacionAPI.Repositories.Implementations
 
             return entity;
         }
+        public List<TEntity> UpdateRange(List<TEntity> entities)
+        {
+            Context.UpdateRange(entities);
+            Context.SaveChanges();
+
+            return entities;
+        }
+
 
         public TEntity Add(TEntity entity)
         {

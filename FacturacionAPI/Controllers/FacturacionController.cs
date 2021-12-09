@@ -132,7 +132,7 @@ namespace FacturacionAPI.Controllers
         [HttpGet("searchFacturas")]
         public IActionResult searchFacturas(DateTime desde, DateTime hasta)
         {
-            if(hasta.Year != 1969)
+            if(hasta.Year > 2020)
             {
                 var facturas = this._vfacturacionRepository.GetAllBy(u => u.Fecha >= desde && u.Fecha <= hasta).ToList();
 
@@ -160,7 +160,7 @@ namespace FacturacionAPI.Controllers
         [HttpGet("searchFacturas2")]
         public IActionResult searchFacturas2(DateTime desde, DateTime hasta)
         {
-            if (hasta.Year != 1969)
+            if (hasta.Year > 2020)
             {
                 var facturas = this._factuacionRespository.GetAllBy(u => u.Fecha >= desde && u.Fecha <= hasta).ToList();
                 foreach (Facturacion f in facturas)
@@ -195,6 +195,44 @@ namespace FacturacionAPI.Controllers
                 return Ok(facturas);
             }
 
+        }
+
+        // PUT api/<FacturacionController>/5
+        [HttpPost("UpdateInvoices")]
+        public IActionResult UpdateInvoices(Contabilizar c)
+        {
+
+            if (c.Hasta.Year > 2020)
+            {
+                var facturas = this._factuacionRespository.GetAllBy(u => u.Fecha >= c.Desde && u.Fecha <= c.Hasta && u.IdAsiento == null).ToList();
+                foreach (Facturacion f in facturas)
+                {
+                    f.IdAsiento = c.IdAsiento;
+                }
+
+
+                if (facturas == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(this._factuacionRespository.UpdateRange(facturas));
+            }
+            else
+            {
+                var facturas = this._factuacionRespository.GetAllBy(u => u.Fecha >= c.Desde && u.IdAsiento == null).ToList();
+                foreach (Facturacion f in facturas)
+                {
+                    f.IdAsiento = c.IdAsiento;
+                }
+
+                if (facturas == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(this._factuacionRespository.UpdateRange(facturas));
+            }
         }
 
     }

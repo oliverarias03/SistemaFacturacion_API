@@ -325,5 +325,7 @@ C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAP
 C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.FacturacionAPI - Web Deploy.json
 C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
-C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\FacturacionAPI - Web Deploy\apis1.arm.json
 C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\FacturacionAPI - Web Deploy\profile.arm.json
+C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.V2FacturacionAPI - Web Deploy.json
+C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\V2FacturacionAPI - Web Deploy\mssql1.arm.json
+C:\Users\User\Desktop\APEC\6 out of 9\OpenSource\ProyectoFinal\API\FacturacionAPI\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\V2FacturacionAPI - Web Deploy\profile.arm.json
